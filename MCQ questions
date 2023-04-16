@@ -1,0 +1,41 @@
+import random
+print("Enter your name for the test")
+name=input()
+q=['1.What is the spelling of number 3 ? ', '2.What is the special occasion on 26th Jan ?',  '3.Who is the prime minister of india ?', '4.What is the capital of Telangana ?']
+ans1=['Three','Nanda' ,'Hari','Two']
+ans2=['None of the above','Republic day',"Gandhi's Birthday",'Independance day']
+ans3=['Narendra modi','Rakesh jujunwala','Nirav modi','Satwik nadella']
+ans4=['Hyderabad ', 'Mumbai','Bombay','Delhi']
+correct={q[0]:ans1[0],q[1]:ans2[1],q[2]:ans3[0],q[3]:ans4[0]}
+score =1
+random.shuffle(ans1)
+print(q[0])
+print(*ans1,sep="\n")
+print("Enter your choice")
+choice1 = input(">")
+if choice1 == correct.get(q[0]):
+    score = score+1
+random.shuffle(ans2)
+print(q[1])
+print(*ans2,sep="\n")
+print("Enter your choice")
+choice2 = input(">")
+if choice2 == correct.get(q[1]):
+    score = score + 1
+print(q[2])
+random.shuffle(ans3)
+print(*ans3,sep="\n")
+print("Enter your choice")
+choice3 = input(">")
+if choice3 == correct.get(q[2]):
+    score = score + 1
+print(q[3])
+random.shuffle(ans4)
+print(*ans4,sep="\n")
+print("Enter your choice")
+choice4 = input(">")
+if choice4 == correct.get(q[3]):
+    score = score + 1
+
+
+print(name,"your score was",score)
